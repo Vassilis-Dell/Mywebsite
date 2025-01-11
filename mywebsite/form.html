@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Form</title>
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-2">
+                    <a href="http://localhost/mywebsite/"><img alt="English Premier League" width="150" height="150" src="images/pl-main-logo.png" class="rounded-circle" /></a>
+                </div>
+                <div class="col-md-10">
+                    <div class="page-header">
+                        <h1>Premier League</h1>
+                    </div>
+                    <h3>No room for racism</h3>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sign-in.html">Sign in</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="form.html">Register</a>
+                        </li>
+                        <li class="nav-item dropdown ml-md-auto">
+                            <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown">Premier League</a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="table.html">Tables</a> <a class="dropdown-item" href="https://www.premierleague.com/fixtures">Fixtures</a> <a class="dropdown-item" href="https://www.premierleague.com/results">Results</a>
+                                <div class="dropdown-divider"></div> <a class="dropdown-item" href="https://www.premierleague.com/news">News</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <img alt="your account" src="images/your_account.png">
+            <br><br>
+            <h2>Creating a new account</h2>
+            <form method="post" action="confirmation.php" enctype="application/x-www-form-urlencoded" autocomplete="on" accept-charset="utf-8" target="_self" onsubmit="validateForm(event)">
+                <hr>
+                <div class="form-error"><span id="form-error" style="color: red; display: none;">Please correct the errors in the form</span>
+				</div>
+                    <br>
+                    <table>
+					    <tr>
+                                                                                 
+                            <td><label for="fname"><b>First Name</b></label></td>
+                            <td><div class="input-icon"><input type="text" name="fname" id="fname" title="Your first name"  autocomplete="given-name" enterkeyhint="next" required><i  id="fname-icon"</i></div>
+							<span id="fname-error" style="color: red; display: none;">First name is too short</span></td>
+
+						</tr>
+                       
+                        <tr>
+						    
+                            <td><label for="lname"><b>Last Name</b></label></td>
+                            <td><div class="input-icon"><input type="text" name="lname" id="lname" title="Your last name"  autocomplete="family-name" enterkeyhint="next" required><i id="lname-icon"></i></div>
+							<span id="lname-error" style="color: red; display: none;">Last name is too short</span></td>
+
+						</tr>                                                      
+                        
+                        <tr>
+						    
+                            <td><label for="email"><b>Email Address</b></label></td>
+                            <td><div class="input-icon"><input type="email" name="email" id="email" title="Your email"  enterkeyhint="next" required><i id="email-icon"></i></div>
+                            <span id="email-error" style="color: red; display: none;">format xxxxxx@xxxxx.com</span></td>
+    
+                        </tr>
+
+                    <tr>
+						<td><label for="password"><b>New Password</b></label></td>
+						<td>
+							<div class="input-icon">
+								<input type="password" name="password" id="password" title="Your password" enterkeyhint="next" required>
+								<i id="password-icon" class="fas fa-eye" onclick="togglePasswordVisibility()"></i>
+							</div>
+							<span id="password-error" style="color: red; display: none;">Password should have minimum of one lowercase <br>letter, one uppercase letter, one number, <br>one special character (! @ # $ % ^ & *) <br>and a maximum of 20 characters.</span>
+						</td>
+
+					</tr>
+
+                        <tr>
+						    
+                            <td><label for="date_birth"><b>Date of Birth</b></label></td>
+                            <td><div class="input-icon"><input type="date" name="date_birth" title="Date of your birth in form mm/dd/yyyy" required><i id="dob-icon"></i></div>
+                            <span id="date-error" style="color: red; display: none;">Date of birth can not be in the future.</span></td>
+
+                        </tr>
+
+                        <tr>
+						    
+                            <td><label for="country"><b>Country/Region of Residence</b></label></td>
+                            <td>
+                                <select id="country" name="country" autocomplete="country" enterkeyhint="next" required>  
+                                         <option>select country</option>
+											<option value="AF">Afghanistan</option>
+											<option value="AX">Aland Islands</option>
+											<option value="AL">Albania</option>
+											<option value="DZ">Algeria</option>
+											<option value="AS">American Samoa</option>
+											<option value="AD">Andorra</option>
+											<option value="AO">Angola</option>
+											<option value="AI">Anguilla</option>
+											<option value="AQ">Antarctica</option>
+											<option value="AG">Antigua &amp; Barbuda</option>
+											<option value="AR">Argentina</option>
+											<option value="AM">Armenia</option>
+											<option value="AW">Aruba</option>
+											<option value="AU">Australia</option>
+											<option value="AT">Austria</option>
+											<option value="AZ">Azerbaijan</option>
+											<option value="BS">Bahamas</option>
+											<option value="BH">Bahrain</option>
+											<option value="BD">Bangladesh</option>
+											<option value="BB">Barbados</option>
+											<option value="BY">Belarus</option>
+											<option value="BE">Belgium</option>
+											<option value="BZ">Belize</option>
+											<option value="BJ">Benin</option>
+											<option value="BM">Bermuda</option>
+											<option value="BT">Bhutan</option>
+											<option value="BO">Bolivia</option>
+											<option value="BQ">Bonaire, Sint Eustatius &amp; Saba</option>
+											<option value="BA">Bosnia &amp; Herzegovina</option>
+											<option value="BW">Botswana</option>
+											<option value="BV">Bouvet Island</option>
+											<option value="BR">Brazil</option>
+											<option value="IO">British Indian Ocean Territory</option>
+											<option value="BN">Brunei Darussalam</option>
+											<option value="BG">Bulgaria</option>
+											<option value="BF">Burkina Faso</option>
+											<option value="BI">Burundi</option>
+											<option value="KH">Cambodia</option>
+											<option value="CM">Cameroon</option>
+											<option value="CA">Canada</option>
+											<option value="CV">Cape Verde</option>
+											<option value="KY">Cayman Islands</option>
+											<option value="CF">Central African Republic</option>
+											<option value="TD">Chad</option>
+											<option value="CL">Chile</option>
+											<option value="CN">China</option>
+											<option value="CX">Christmas Island</option>
+											<option value="CC">Cocos (Keeling) Islands</option>
+											<option value="CO">Colombia</option>
+											<option value="KM">Comoros</option>
+											<option value="CG">Congo</option>
+											<option value="CD">Congo, Democratic Republic of the Congo</option>
+											<option value="CK">Cook Islands</option>
+											<option value="CR">Costa Rica</option>
+											<option value="CI">Cote D'Ivoire</option>
+											<option value="HR">Croatia</option>
+											<option value="CU">Cuba</option>
+											<option value="CW">Curacao</option>
+											<option value="CY">Cyprus</option>
+											<option value="CZ">Czech Republic</option>
+											<option value="DK">Denmark</option>
+											<option value="DJ">Djibouti</option>
+											<option value="DM">Dominica</option>
+											<option value="DO">Dominican Republic</option>
+											<option value="EC">Ecuador</option>
+											<option value="EG">Egypt</option>
+											<option value="SV">El Salvador</option>
+											<option value="GQ">Equatorial Guinea</option>
+											<option value="ER">Eritrea</option>
+											<option value="EE">Estonia</option>
+											<option value="ET">Ethiopia</option>
+											<option value="FK">Falkland Islands (Malvinas)</option>
+											<option value="FO">Faroe Islands</option>
+											<option value="FJ">Fiji</option>
+											<option value="FI">Finland</option>
+											<option value="FR">France</option>
+											<option value="GF">French Guiana</option>
+											<option value="PF">French Polynesia</option>
+											<option value="TF">French Southern Territories</option>
+											<option value="GA">Gabon</option>
+											<option value="GM">Gambia</option>
+											<option value="GE">Georgia</option>
+											<option value="DE">Germany</option>
+											<option value="GH">Ghana</option>
+											<option value="GI">Gibraltar</option>
+											<option value="GR">Greece</option>
+											<option value="GL">Greenland</option>
+											<option value="GD">Grenada</option>
+											<option value="GP">Guadeloupe</option>
+											<option value="GU">Guam</option>
+											<option value="GT">Guatemala</option>
+											<option value="GG">Guernsey</option>
+											<option value="GN">Guinea</option>
+											<option value="GW">Guinea-Bissau</option>
+											<option value="GY">Guyana</option>
+											<option value="HT">Haiti</option>
+											<option value="HM">Heard Island and Mcdonald Islands</option>
+											<option value="VA">Holy See (Vatican City State)</option>
+											<option value="HN">Honduras</option>
+											<option value="HK">Hong Kong</option>
+											<option value="HU">Hungary</option>
+											<option value="IS">Iceland</option>
+											<option value="IN">India</option>
+											<option value="ID">Indonesia</option>
+											<option value="IR">Iran, Islamic Republic of</option>
+											<option value="IQ">Iraq</option>
+											<option value="IE">Ireland</option>
+											<option value="IM">Isle of Man</option>
+											<option value="IL">Israel</option>
+											<option value="IT">Italy</option>
+											<option value="JM">Jamaica</option>
+											<option value="JP">Japan</option>
+											<option value="JE">Jersey</option>
+											<option value="JO">Jordan</option>
+											<option value="KZ">Kazakhstan</option>
+											<option value="KE">Kenya</option>
+											<option value="KI">Kiribati</option>
+											<option value="KP">Korea, Democratic People's Republic of</option>
+											<option value="KR">Korea, Republic of</option>
+											<option value="XK">Kosovo</option>
+											<option value="KW">Kuwait</option>
+											<option value="KG">Kyrgyzstan</option>
+											<option value="LA">Lao People's Democratic Republic</option>
+											<option value="LV">Latvia</option>
+											<option value="LB">Lebanon</option>
+											<option value="LS">Lesotho</option>
+											<option value="LR">Liberia</option>
+											<option value="LY">Libyan Arab Jamahiriya</option>
+											<option value="LI">Liechtenstein</option>
+											<option value="LT">Lithuania</option>
+											<option value="LU">Luxembourg</option>
+											<option value="MO">Macao</option>
+											<option value="MK">Macedonia, the Former Yugoslav Republic of</option>
+											<option value="MG">Madagascar</option>
+											<option value="MW">Malawi</option>
+											<option value="MY">Malaysia</option>
+											<option value="MV">Maldives</option>
+											<option value="ML">Mali</option>
+											<option value="MT">Malta</option>
+											<option value="MH">Marshall Islands</option>
+											<option value="MQ">Martinique</option>
+											<option value="MR">Mauritania</option>
+											<option value="MU">Mauritius</option>
+											<option value="YT">Mayotte</option>
+											<option value="MX">Mexico</option>
+											<option value="FM">Micronesia, Federated States of</option>
+											<option value="MD">Moldova, Republic of</option>
+											<option value="MC">Monaco</option>
+											<option value="MN">Mongolia</option>
+											<option value="ME">Montenegro</option>
+											<option value="MS">Montserrat</option>
+											<option value="MA">Morocco</option>
+											<option value="MZ">Mozambique</option>
+											<option value="MM">Myanmar</option>
+											<option value="NA">Namibia</option>
+											<option value="NR">Nauru</option>
+											<option value="NP">Nepal</option>
+											<option value="NL">Netherlands</option>
+											<option value="AN">Netherlands Antilles</option>
+											<option value="NC">New Caledonia</option>
+											<option value="NZ">New Zealand</option>
+											<option value="NI">Nicaragua</option>
+											<option value="NE">Niger</option>
+											<option value="NG">Nigeria</option>
+											<option value="NU">Niue</option>
+											<option value="NF">Norfolk Island</option>
+											<option value="MP">Northern Mariana Islands</option>
+											<option value="NO">Norway</option>
+											<option value="OM">Oman</option>
+											<option value="PK">Pakistan</option>
+											<option value="PW">Palau</option>
+											<option value="PS">Palestinian Territory, Occupied</option>
+											<option value="PA">Panama</option>
+											<option value="PG">Papua New Guinea</option>
+											<option value="PY">Paraguay</option>
+											<option value="PE">Peru</option>
+											<option value="PH">Philippines</option>
+											<option value="PN">Pitcairn</option>
+											<option value="PL">Poland</option>
+											<option value="PT">Portugal</option>
+											<option value="PR">Puerto Rico</option>
+											<option value="QA">Qatar</option>
+											<option value="RE">Reunion</option>
+											<option value="RO">Romania</option>
+											<option value="RU">Russian Federation</option>
+											<option value="RW">Rwanda</option>
+											<option value="BL">Saint Barthelemy</option>
+											<option value="SH">Saint Helena</option>
+											<option value="KN">Saint Kitts &amp; Nevis</option>
+											<option value="LC">Saint Lucia</option>
+											<option value="MF">Saint Martin</option>
+											<option value="PM">Saint Pierre &amp; Miquelon</option>
+											<option value="VC">Saint Vincent &amp; the Grenadines</option>
+											<option value="WS">Samoa</option>
+											<option value="SM">San Marino</option>
+											<option value="ST">Sao Tome &amp; Principe</option>
+											<option value="SA">Saudi Arabia</option>
+											<option value="SN">Senegal</option>
+											<option value="RS">Serbia</option>
+											<option value="CS">Serbia &amp; Montenegro</option>
+											<option value="SC">Seychelles</option>
+											<option value="SL">Sierra Leone</option>
+											<option value="SG">Singapore</option>
+											<option value="SX">Sint Maarten</option>
+											<option value="SK">Slovakia</option>
+											<option value="SI">Slovenia</option>
+											<option value="SB">Solomon Islands</option>
+											<option value="SO">Somalia</option>
+											<option value="ZA">South Africa</option>
+											<option value="GS">South Georgia &amp; the South Sandwich Islands</option>
+											<option value="SS">South Sudan</option>
+											<option value="ES">Spain</option>
+											<option value="LK">Sri Lanka</option>
+											<option value="SD">Sudan</option>
+											<option value="SR">Suriname</option>
+											<option value="SJ">Svalbard &amp; Jan Mayen</option>
+											<option value="SZ">Swaziland</option>
+											<option value="SE">Sweden</option>
+											<option value="CH">Switzerland</option>
+											<option value="SY">Syrian Arab Republic</option>
+											<option value="TW">Taiwan, Province of China</option>
+											<option value="TJ">Tajikistan</option>
+											<option value="TZ">Tanzania, United Republic of</option>
+											<option value="TH">Thailand</option>
+											<option value="TL">Timor-Leste</option>
+											<option value="TG">Togo</option>
+											<option value="TK">Tokelau</option>
+											<option value="TO">Tonga</option>
+											<option value="TT">Trinidad &amp; Tobago</option>
+											<option value="TN">Tunisia</option>
+											<option value="TR">Turkey</option>
+											<option value="TM">Turkmenistan</option>
+											<option value="TC">Turks &amp; Caicos Islands</option>
+											<option value="TV">Tuvalu</option>
+											<option value="UG">Uganda</option>
+											<option value="UA">Ukraine</option>
+											<option value="AE">United Arab Emirates</option>
+											<option value="GB">United Kingdom</option>
+											<option value="US">United States</option>
+											<option value="UM">United States Minor Outlying Islands</option>
+											<option value="UY">Uruguay</option>
+											<option value="UZ">Uzbekistan</option>
+											<option value="VU">Vanuatu</option>
+											<option value="VE">Venezuela</option>
+											<option value="VN">Viet Nam</option>
+											<option value="VG">Virgin Islands, British</option>
+											<option value="VI">Virgin Islands, U.s.</option>
+											<option value="WF">Wallis &amp; Futuna</option>
+											<option value="EH">Western Sahara</option>
+											<option value="YE">Yemen</option>
+											<option value="ZM">Zambia</option>
+											<option value="ZW">Zimbabwe</option>
+                                        </select>
+										<i id="country-icon"></i></div>
+										<span id="country-error" style="color: red; display: none;">Please, select your country</span></td>
+
+                        </tr>
+
+                       <tr>
+							<td><label for="phone"><b>Mobile Number</b></label></td>
+							<td>
+								<div class="input-icon">
+									<input type="tel" name="phone" id="phone" title="Your mobile number" autocomplete="tel" enterkeyhint="next" pattern="[0-9]{10}" required>
+									<i id="phone-icon"></i>
+								</div>
+								<span id="phone-error" style="color: red; display: none;">Please, type a 10-digit mobile number</span>
+							</td>
+						</tr>
+
+
+						<tr>
+
+						<td><label for="sex" title="Your gender"><b>Gender</b></label></td>
+						<td>
+							<div class="input-icon">
+								<label><input type="radio" name="sex" id="male" value="Male" required> <b>Male</b></label>
+								<label><input type="radio" name="sex" id="female" value="Female"> <b>Female</b></label> 
+								<label><input type="radio" name="sex" id="Unspecified" value="Unspecified"> <b>Unspecified</b></label>
+								<i id="gender-icon"></i>
+							</div>
+							<span id="gender-error" style="color: red; display: none;">Please, select your gender</span>
+						</td>
+					</tr>
+
+
+                        <tr>
+						    
+                            <td><label for="terms-of-use" title="Terms of use"><b>Accept terms of use</b></label></td>
+                            <td><div class="input-icon">
+                                <input type="checkbox" id="terms-of-use" name="terms-of-use"  value="yes" required><i id="terms-of-use-icon"></i></div>
+                                <span id="terms-of-use-error" style="color: red; display: none;">Please,note that is important to accept<br> the terms of use.</span></td>
+                        </tr>
+
+                        <tr>
+
+                           <td></td><td><button type="submit" value="Register">Register</button> <button type="reset" value="reset" onclick="resetForm()">Reset</button></td>
+
+						 </tr>
+
+                    </table>
+			</form>
+
+<script>
+		   // JavaScript code to display message and icon based on first name length
+		document.getElementById("fname").addEventListener("input", function() {
+			var fname = this.value.trim();
+			var fnameError = document.getElementById("fname-error");
+			var fnameIcon = document.getElementById("fname-icon");
+
+			if (fname.length < 3) {
+				fnameError.style.display = "inline";
+				fnameIcon.className = "fas fa-thumbs-down thumbs-down";
+			} else {
+				fnameError.style.display = "none";
+				fnameIcon.className = "fas fa-thumbs-up thumbs-up";
+			}
+		});
+
+		 // JavaScript code to display message and icon based on last name length
+		document.getElementById("lname").addEventListener("input", function() {
+			var lname = this.value.trim();
+			var lnameError = document.getElementById("lname-error");
+			var lnameIcon = document.getElementById("lname-icon");
+
+			if (lname.length < 8) {
+				lnameError.style.display = "inline";
+				lnameIcon.className = "fas fa-thumbs-down thumbs-down";
+			} else {
+				lnameError.style.display = "none";
+				lnameIcon.className = "fas fa-thumbs-up thumbs-up";
+			}
+		});
+
+
+		function togglePasswordVisibility() {
+			var passwordInput = document.getElementById("password");
+			var passwordIcon = document.getElementById("password-icon");
+
+			if (passwordInput.type === "password") {
+				passwordInput.type = "text";
+				passwordIcon.classList.remove("fa-eye");
+				passwordIcon.classList.add("fa-eye-slash");
+			} else {
+				passwordInput.type = "password";
+				passwordIcon.classList.remove("fa-eye-slash");
+				passwordIcon.classList.add("fa-eye");
+			}
+		}
+
+
+
+		  // JavaScript code to validate password and display message and icon
+		document.getElementById("password").addEventListener("input", function() {
+			var password = this.value.trim();
+			var passwordError = document.getElementById("password-error");
+			var passwordIcon = document.getElementById("password-icon");
+			var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,20}$/;
+
+			if (passwordPattern.test(password)) {
+				passwordError.style.display = "none";
+				passwordIcon.className = "fas fa-thumbs-up thumbs-up";
+			} else {
+				passwordError.style.display = "inline";
+				passwordIcon.className = "fas fa-thumbs-down thumbs-down";
+			}
+		});
+
+
+		  // JavaScript code to validate email format and display message and icon
+		document.getElementById("email").addEventListener("input", function() {
+			var email = this.value.trim();
+			var emailError = document.getElementById("email-error");
+			var emailIcon = document.getElementById("email-icon");
+			var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+			if (emailPattern.test(email)) {
+				emailError.style.display = "none";
+				emailIcon.className = "fas fa-thumbs-up thumbs-up";
+			} else {
+				emailError.style.display = "inline";
+				emailIcon.className = "fas fa-thumbs-down thumbs-down";
+			}
+		});
+
+				 // JavaScript code to validate date of birth
+			document.getElementsByName("date_birth")[0].addEventListener("input", function() {
+				var dob = this.value.trim();
+				var dobError = document.getElementById("date-error");
+				var dobIcon = document.getElementById("dob-icon");
+
+				// Reset the error message initially
+				dobError.style.display = "none";
+
+				// Check if the input is not empty
+				if (dob) {
+					// Attempt to create a Date object from the input value
+					var dobDate = new Date(dob);
+
+					// Get the current date
+					var currentDate = new Date();
+
+					// Check if the Date object is valid and the year is between 1900 and the current year
+					if (isNaN(dobDate.getTime()) || dobDate.getFullYear() < 1900 || dobDate.getFullYear() > currentDate.getFullYear() || dobDate > currentDate) {
+						dobError.style.display = "inline";
+						dobIcon.className = "fa fa-thumbs-down thumbs-down"; // Corrected class name
+					} else {
+						// Date of birth is valid
+						dobIcon.className = "fa fa-thumbs-up thumbs-up"; // Corrected class name
+					}
+				} else {
+					// Empty input
+					dobIcon.className = ""; // Reset the icon
+				}
+			});
+
+
+
+			// JavaScript code to validate country
+			document.getElementById("country").addEventListener("change", function() {
+				var country = this.value.trim();
+				var countryIcon = document.getElementById("country-icon");
+				if (country !== "") {
+					countryIcon.className = "fas fa-thumbs-up thumbs-up";
+				} else {
+					countryIcon.className = "fas fa-thumbs-down thumbs-down";
+				}
+			});
+
+		// JavaScript code to validate phone number
+		document.getElementById("phone").addEventListener("input", function() {
+			var phone = this.value.trim();
+			var phoneIcon = document.getElementById("phone-icon");
+			var phoneError = document.getElementById("phone-error");
+			var phonePattern = /^\d{10}$/; // Assuming the phone number should be exactly 10 digits
+
+			if (phonePattern.test(phone)) {
+				phoneIcon.className = "fas fa-thumbs-up thumbs-up";
+				phoneError.style.display = "none";
+			} else {
+				phoneIcon.className = "fas fa-thumbs-down thumbs-down";
+				phoneError.style.display = "inline";
+			}
+		});
+
+			// JavaScript code to validate gender
+		var genderRadios = document.querySelectorAll('input[name="sex"]');
+		genderRadios.forEach(function(radio) {
+			radio.addEventListener("change", function() {
+				var genderIcon = document.getElementById("gender-icon");
+				var genderError = document.getElementById("gender-error");
+				if (document.querySelector('input[name="sex"]:checked')) {
+					genderIcon.className = "fas fa-thumbs-up thumbs-up";
+					genderError.style.display = "none";
+				} else {
+					genderIcon.className = "fas fa-thumbs-down thumbs-down";
+					genderError.style.display = "inline";
+				}
+			});
+		});
+
+	
+		// JavaScript code to display message when terms of use is not checked
+		document.getElementById("terms-of-use").addEventListener("change", function() {
+			var termsOfUseIcon = document.getElementById("terms-of-use-icon");
+			var termsOfUseError = document.getElementById("terms-of-use-error");
+			if (this.checked) {
+				termsOfUseIcon.className = "fas fa-thumbs-up thumbs-up";
+				termsOfUseError.style.display = "none";
+			} else {
+				termsOfUseIcon.className = "fas fa-thumbs-down thumbs-down";
+				termsOfUseError.style.display = "inline";
+			}
+		});
+
+		function validateForm(event) {
+        var isValid = true;
+
+        // Validation for first name
+        var firstName = document.getElementById("fname").value.trim();
+        if (firstName.length < 3) {
+            isValid = false;
+            document.getElementById("fname-error").style.display = "inline";
+        } else {
+            document.getElementById("fname-error").style.display = "none";
+        }
+
+        // Validation for last name
+        var lastName = document.getElementById("lname").value.trim();
+        if (lastName.length < 8) {
+            isValid = false;
+            document.getElementById("lname-error").style.display = "inline";
+        } else {
+            document.getElementById("lname-error").style.display = "none";
+        }
+
+        // Validation for email
+        var email = document.getElementById("email").value.trim();
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(email)) {
+            isValid = false;
+            document.getElementById("email-error").style.display = "inline";
+        } else {
+            document.getElementById("email-error").style.display = "none";
+        }
+
+        // Validation for password
+        var password = document.getElementById("password").value;
+        var passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,20}$/;
+        if (!passwordPattern.test(password)) {
+            isValid = false;
+            document.getElementById("password-error").style.display = "inline";
+        } else {
+            document.getElementById("password-error").style.display = "none";
+        }
+
+         // Validation for date of birth
+    var dob = document.getElementsByName("date_birth")[0].value.trim();
+    var dobError = document.getElementById("date-error");
+    var dobIcon = document.getElementById("dob-icon");
+
+    // Reset the error message initially
+    dobError.style.display = "none";
+
+    // Check if the input is not empty
+    if (dob) {
+        // Attempt to create a Date object from the input value
+        var dobDate = new Date(dob);
+
+        // Get the current date
+        var currentDate = new Date();
+
+        // Check if the Date object is valid and the year is between 1900 and the current year
+        if (isNaN(dobDate.getTime()) || dobDate.getFullYear() < 1900 || dobDate.getFullYear() > currentDate.getFullYear() || dobDate > currentDate) {
+            isValid = false;
+            dobError.style.display = "inline";
+            dobIcon.className = "fa fa-thumbs-down thumbs-down"; // Corrected class name
+        } else {
+            // Date of birth is valid
+            dobIcon.className = "fa fa-thumbs-up thumbs-up"; // Corrected class name
+        }
+    } else {
+        // Empty input
+        dobIcon.className = ""; // Reset the icon
+    }
+
+    // Validation for country
+    var country = document.getElementById("country").value.trim();
+    var countryIcon = document.getElementById("country-icon");
+    if (country !== "") {
+        countryIcon.className = "fas fa-thumbs-up thumbs-up";
+    } else {
+        isValid = false;
+        countryIcon.className = "fas fa-thumbs-down thumbs-down";
+    }
+
+    // Validation for gender
+    var genderIcon = document.getElementById("gender-icon");
+    var genderError = document.getElementById("gender-error");
+    if (!document.querySelector('input[name="sex"]:checked')) {
+        isValid = false;
+        genderIcon.className = "fas fa-thumbs-down thumbs-down";
+        genderError.style.display = "inline";
+    } else {
+        genderIcon.className = "fas fa-thumbs-up thumbs-up";
+        genderError.style.display = "none";
+    }
+
+    // Validation for phone number
+    var phone = document.getElementById("phone").value.trim();
+    var phoneIcon = document.getElementById("phone-icon");
+    var phoneError = document.getElementById("phone-error");
+    var phonePattern = /^\d{10}$/; // Assuming the phone number should be exactly 10 digits
+
+    if (phonePattern.test(phone)) {
+        phoneIcon.className = "fas fa-thumbs-up thumbs-up";
+        phoneError.style.display = "none";
+    } else {
+        isValid = false;
+        phoneIcon.className = "fas fa-thumbs-down thumbs-down";
+        phoneError.style.display = "inline";
+    }
+
+    // Validation for terms of use
+    var termsOfUseIcon = document.getElementById("terms-of-use-icon");
+    var termsOfUseError = document.getElementById("terms-of-use-error");
+    if (!document.getElementById("terms-of-use").checked) {
+        isValid = false;
+        termsOfUseIcon.className = "fas fa-thumbs-down thumbs-down";
+        termsOfUseError.style.display = "inline";
+    } else {
+        termsOfUseIcon.className = "fas fa-thumbs-up thumbs-up";
+        termsOfUseError.style.display = "none";
+    }
+
+    if (!isValid) {
+        event.preventDefault(); // Prevent form submission if validation fails
+        document.getElementById("form-error").style.display = "block";
+    } else {
+        document.getElementById("form-error").style.display = "none";
+    }
+}
+
+		  function resetForm() {
+        // Reset icons
+        var icons = document.querySelectorAll(".input-icon i");
+        icons.forEach(function(icon) {
+            icon.className = ""; // Reset the icon
+        });
+
+        // Reset error messages
+        var errorMessages = document.querySelectorAll("span[id$='-error']"); // Select all spans whose id ends with '-error'
+        errorMessages.forEach(function(errorMessage) {
+            errorMessage.style.display = "none"; // Hide the error message
+        });
+    }
+
+</script>
+            <br><br>
+			<hr>
+            <div class="centered-content">
+			     <div class="centered-content a img">			     
+                 <a href="http://localhost/mywebsite/"><img src="images/Premier_League.jpg" alt="Premier League"></a>
+                </div>                
+				 
+				 <div class="centered-content b">
+				           <b>&copy; PREMIER LEAGUE 2023</b>					
+				 </div>
+                         
+            </div>
+            <br><br>
+        </div>
+    </div>
+</div>
+<br><br><br>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/scripts.js"></script>
+</body>
+</html>

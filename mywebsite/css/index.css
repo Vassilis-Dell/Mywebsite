@@ -1,0 +1,14 @@
+ .centered-content {
+		text-align: center;
+	}
+
+.centered-content a img {
+		color: white; /* Image color */
+		border: 4px solid white; /* Image border color */
+	}
+
+.centered-content b {
+		color: black; /* Text color */
+		font-family: 'Times New Roman', Times, serif; /* Font family */
+	}
+
